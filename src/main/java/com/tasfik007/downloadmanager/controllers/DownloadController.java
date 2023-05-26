@@ -1,6 +1,6 @@
 package com.tasfik007.downloadmanager.controllers;
 
-import com.tasfik007.downloadmanager.services.DownloadService;
+import com.tasfik007.downloadmanager.services.MultiThreadedDownloadService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequiredArgsConstructor
 @RequestMapping("/download")
 public class DownloadController {
-    private final DownloadService downloadService;
+    private final MultiThreadedDownloadService downloadService;
 
     @GetMapping("/ping")
     public String pingDownloadService() {

@@ -5,7 +5,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 @RequiredArgsConstructor
-public class DownloadService {
+public class MultiThreadedDownloadService {
     public String ping() {
         return "packets received successfully!";
     }
