@@ -24,6 +24,10 @@ public class DownloadThread extends Thread {
         return tempFile;
     }
 
+    public boolean deleteTempFile() {
+        return tempFile.delete();
+    }
+
     @Override
     public void run() {
         try {

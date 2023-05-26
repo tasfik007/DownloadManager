@@ -58,6 +58,7 @@ public class MultiThreadedDownloadService {
                         outputStream.write(buffer, 0, bytesRead);
                     }
                 }
+                thread.deleteTempFile();
             }
         }
     }
