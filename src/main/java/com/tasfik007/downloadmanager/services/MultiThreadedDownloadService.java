@@ -14,7 +14,6 @@ import java.net.URL;
 @RequiredArgsConstructor
 public class MultiThreadedDownloadService {
 
-    private static final String FILE_URL = "https://speed.hetzner.de/100MB.bin";
     private static final String OUTPUT_FILE_PATH = "/home/tasfik/Downloads/";
     private static final int NUM_THREADS = 4;
 
@@ -22,7 +21,7 @@ public class MultiThreadedDownloadService {
         return "packets received successfully!";
     }
 
-    public void download() {
+    public void download(String FILE_URL) {
         try {
             URL url = new URL(FILE_URL);
             HttpURLConnection connection = (HttpURLConnection) url.openConnection();
